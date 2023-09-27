@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:elevation="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/itemBackground"
+
+        >
+
+        <CheckBox
+            android:id="@+id/check_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_task"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="italic"
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="@id/check_completed"
+            app:layout_constraintStart_toEndOf="@id/check_completed"
+            app:layout_constraintTop_toTopOf="@id/check_completed"
+            app:layout_constraintWidth_percent=".75"
+            tools:text="task item"
+            />
+
+        <ImageView
+            android:id="@+id/img_important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/pin"
+            app:layout_constraintBottom_toBottomOf="@id/txt_task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txt_task"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+

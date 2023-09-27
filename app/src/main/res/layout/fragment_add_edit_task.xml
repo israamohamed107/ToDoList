@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.addedittask.AddEditTaskFragment"
+    android:background="@color/itemBackground"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <EditText
+            android:id="@+id/edTxt_task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_task"
+            android:inputType="textMultiLine"
+            android:textColor="@color/textColor"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_15sdp"
+            />
+
+        <CheckBox
+            android:id="@+id/check_important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:text="@string/important"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_13sdp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_date"
+            android:text="@string/created_at"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_13sdp"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_save"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/save"
+        app:tint="@color/white"
+
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
